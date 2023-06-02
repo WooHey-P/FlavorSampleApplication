@@ -30,6 +30,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    flavorDimensions 'version'
+    productFlavors {
+        app1 {
+            manifestPlaceholders appName: 'first app'
+            dimension 'version'
+            applicationId 'com.app.first'
+            versionCode 1
+            versionName '1.0.0'
+        }
+        app2 {
+            manifestPlaceholders appName: 'second app'
+            dimension 'version'
+            applicationId 'com.app.second'
+            versionCode 1
+            versionName '1.0.0'
+        }
+    }
 }
 
 dependencies {
